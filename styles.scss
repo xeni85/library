@@ -1,0 +1,208 @@
+$primary-color: #55c2da;
+$secondary-color: #f5f5dc;
+
+body {
+    height: 100vh;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        flex: 0 1 auto;
+        h1 {
+            display: flex;
+            flex-direction: row;
+            img {
+                height: 3rem;
+            }
+        }
+    }
+    .container {
+        flex: 1 1 auto;
+    }
+}
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vw;
+    background-color: $secondary-color;
+    box-shadow: 0 0 20px $secondary-color;
+    position: relative;
+    h1 {
+        font-weight: bolder;
+    }
+    button {
+        background-color: $primary-color;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        padding: 2.5vh 2.5vw;
+        box-shadow: 0 0 5px $primary-color;
+    }
+}
+.container {
+    background-color: $primary-color;
+    main {
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            button {
+                display: flex;
+                align-items: center;
+                background-color: $secondary-color;
+                font-size: medium;
+                font-size: 18px;
+                font-weight: bold;
+                border: none;
+                border-radius: 10px;
+                padding: 2.5vh 2.5vw;
+                box-shadow: 0 0 5px $secondary-color;
+                img {
+                    height: 3vh;
+                    padding-right: 0.3vw;
+                }
+            }
+        }
+    }
+}
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: black 0.1rem solid;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: $secondary-color;
+    width: 30em;
+    max-width: 30%;
+    padding: 1em 1em;
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .modal-title {
+            font-size: larger;
+            font-weight: bold;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            position: absolute;
+            top: 0.2rem;
+            right: 0.2rem;
+            font-size: larger;
+            font-weight: bold;
+        }
+    }
+    .modal-body {
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-weight: bolder;
+                input {
+                    border-radius: 10px;
+                    border: none;
+                    height: 3rem;
+                    font-size: 16px;
+                    width: 100%;
+                }
+            }
+            div:nth-child(4) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1rem;
+                input {
+                    height: 1rem;
+                    width: 1rem;
+                    padding: 0;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .modal-footer {
+        display: flex;
+        justify-content: center;
+        gap:0.1rem;
+        button {
+            background-color: $primary-color;
+            color: white;
+            font-size: medium;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            padding: 1.5vh 1.5vw;
+            margin-top: 1rem;
+        }
+    }
+}
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+#overlay {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: .5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+button {
+    cursor: pointer;
+}
+
+.card-container {
+    background-color: $primary-color;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem 10rem;
+
+    .card {
+        width: 10rem;
+        border-radius: 10px;
+        box-shadow: 0 0 5px $secondary-color;
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1rem;
+        button {
+            background-color: $primary-color;
+            color: white;
+            font-size: medium;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            padding: 1.5vh 1.5vw;
+        }
+    }
+}

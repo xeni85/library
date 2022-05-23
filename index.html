@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Miss+Fajardose&family=Poppins:wght@300&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="header">
+        <header>
+            <h1><img src="./images/book-svgrepo-com.svg" />library</h1>
+            <button type="button" class="button">Sign-in</button>
+        </header>
+    </div>
+    <div class="container">
+        <br>
+        <main>
+            <!-- Button trigger modal -->
+            <div class="button-container">
+                <button type="button" class="button" data-modal-target="#modal">
+                    <img src="./images/add-svgrepo-com.svg" />
+                    Add a Book
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"  id="modal-title">Add a new Book</h5>
+                        <button type="button" class="button" data-close-button aria-label="Close">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="author" class="form-label"></label>
+                                <input placeholder="Author" type="text" class="form-control" id="author" aria-describedby="authorHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="title" class="form-label"></label>
+                                <input type="text" placeholder="Title" class="form-control" id="title" aria-describedby="titleHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pages" class="form-label"></label>
+                                <input type="number" placeholder="No.pages" class="form-control" id="pages" aria-describedby="pagesHelp">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <label class="form-check-label" for="read">Have you read it?</label>
+                                <input type="checkbox" class="form-check-input" id="read">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-close-button>Cancel</button>
+                        <button type="button" id="addBook" class="btn btn-primary" data-close-button>Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+
+            </div>
+        </main>
+        <div id="overlay"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

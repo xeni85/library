@@ -1,0 +1,205 @@
+body {
+  height: 100vh;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+}
+body .header {
+  flex: 0 1 auto;
+}
+body .header h1 {
+  display: flex;
+  flex-direction: row;
+}
+body .header h1 img {
+  height: 3rem;
+}
+body .container {
+  flex: 1 1 auto;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3vw;
+  background-color: #f5f5dc;
+  box-shadow: 0 0 20px #f5f5dc;
+  position: relative;
+}
+header h1 {
+  font-weight: bolder;
+}
+header button {
+  background-color: #55c2da;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 2.5vh 2.5vw;
+  box-shadow: 0 0 5px #55c2da;
+}
+
+.container {
+  background-color: #55c2da;
+}
+.container main .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.container main .button-container button {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5dc;
+  font-size: medium;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 2.5vh 2.5vw;
+  box-shadow: 0 0 5px #f5f5dc;
+}
+.container main .button-container button img {
+  height: 3vh;
+  padding-right: 0.3vw;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: black 0.1rem solid;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #f5f5dc;
+  width: 30em;
+  max-width: 30%;
+  padding: 1em 1em;
+}
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal .modal-header .modal-title {
+  font-size: larger;
+  font-weight: bold;
+}
+.modal .modal-header button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: larger;
+  font-weight: bold;
+}
+.modal .modal-body form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.modal .modal-body form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+}
+.modal .modal-body form div input {
+  border-radius: 10px;
+  border: none;
+  height: 3rem;
+  font-size: 16px;
+  width: 100%;
+}
+.modal .modal-body form div:nth-child(4) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+.modal .modal-body form div:nth-child(4) input {
+  height: 1rem;
+  width: 1rem;
+  padding: 0;
+  cursor: pointer;
+}
+.modal .modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 0.1rem;
+}
+.modal .modal-footer button {
+  background-color: #55c2da;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 1.5vh 1.5vw;
+  margin-top: 1rem;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+button {
+  cursor: pointer;
+}
+
+.card-container {
+  background-color: #55c2da;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem 10rem;
+}
+.card-container .card {
+  width: 10rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #f5f5dc;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 1rem;
+}
+.card-container .card button {
+  background-color: #55c2da;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 1.5vh 1.5vw;
+}/*# sourceMappingURL=styles.css.map */
